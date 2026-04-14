@@ -1,52 +1,18 @@
-import java.net.URI;
-import java.net.http.HTTPClient;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLCOnnection;
+import java.net.URLEncoder;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
-import java.util.*;
 public class HW5 {
 
-
-
-//Joe Oakes
-public class CaesarCipherFrequencyAnalysis {
-
-    // Relative frequency (%) of each letter in English text (A–Z)
-    // Used as the "expected distribution" for comparison
-    private static final double[] ENGLISH_FREQUENCIES = {
-            8.167, 1.492, 2.782, 4.253, 12.702, 2.228, 2.015, 6.094,
-            6.966, 0.153, 0.772, 4.025, 2.406, 6.749, 7.507, 1.929,
-            0.095, 5.987, 6.327, 9.056, 2.758, 0.978, 2.360, 0.150,
-            1.974, 0.074
-    };
-
     private static final double[] ARABIC_FREQUENCIES = {
-            11.6, // ا (Alif)
-            4.8, // ب
-            3.7, // ت
-            1.1, // ث
-            2.8, // ج
-            2.6, // ح
-            1.1, // خ
-            3.5, // د
-            1.0, // ذ
-            4.7, // ر
-            0.9, // ز
-            6.5, // س
-            3.0, // ش
-            2.9, // ص
-            1.5, // ض
-            1.7, // ط
-            0.7, // ظ
-            3.9, // ع
-            1.0, // غ
-            3.0, // ف
-            2.7, // ق
-            3.6, // ك
-            5.3, // ل
-            3.1, // م
-            7.2, // ن
-            2.5, // ه
-            6.0, // و
-            6.7 // ي
+            11.6, 4.8, 3.7, 1.1, 2.8, 2.6, 1.1, 3.5,
+            1.0, 4.7, 0.9, 6.5, 3.0, 2.9, 1.5, 1.7,
+            0.7, 3.9, 1.0, 3.0, 2.7, 3.6, 5.3, 3.1,
+            7.2, 2.5, 6.0, 6.7
     };
 
     public static void main(String[] args) {
