@@ -15,7 +15,18 @@ public class HW5 {
             7.2, 2.5, 6.0, 6.7
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { throws Exception {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the API Key: ");
+        String apiKey = sc.nextLine().trim();
+
+        String translatedText = ;
+        System.out.print("Enter the API Key: ");
+
+
+
+    }
         // Example Caesar cipher text (shifted version of a known sentence)
         String ciphertext = "Aol xbpjr iyvdu mve qbtwz vcly aol shgf kvn.";
 
@@ -30,8 +41,14 @@ public class HW5 {
      * Tries all 26 possible Caesar shifts and selects the one that produces
      * text closest to standard English letter frequencies.
      */
-    public static String decryptUsingFrequencyAnalysis(String ciphertext) {
-        String bestDecryption = "";
+    public static String translateText(String apiKey, String text) throws exception {
+        String urlStr = "https://translation.googleapis.com/language/translate"
+                + "?key=" + URLEncoder.encode(apiKey, StandardCharsets.U)
+                + "&q=" + encodedText
+                + "&target=ar"
+                + "&format=text";
+
+        URL url = new
         double lowestChiSquare = Double.MAX_VALUE; // Lower is better match
 
         // Try all possible shifts (0–25)
