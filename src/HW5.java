@@ -6,7 +6,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class Hw5 {
+public class HW5 {
 
     private static final char[] ARABIC_ALPHABET = {
             'ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص',
